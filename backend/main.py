@@ -9,7 +9,15 @@ from pydantic import BaseModel
 
 # Add parent directory to path to import rag module
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from rag.retrieve import get_context
+
+# Try to import RAG, but continue if it fails
+try:
+    from rag.retrieve import get_context
+    RAG_AVAILABLE = True
+except ImportError:
+    RAG_AVAILABLE = False
+    def get_context(query):
+        return "RAG system not available - ChromaDB not installed"
 
 app = FastAPI(
     title="Fitness-AI API",
