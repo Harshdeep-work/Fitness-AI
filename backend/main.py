@@ -3,6 +3,8 @@ import sys
 import requests
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 # Add parent directory to path to import rag module
@@ -24,6 +26,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Serve static files from frontend directory
+frontend_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend")
+if os.path.exists(frontend_path):
+    app.mount("/static", StaticFiles(directory=frontend_path), name="static")
+
 class GenerateRequest(BaseModel):
     prompt: str
     model: str = "gemma3:4b"  # Defaulting to our selected production model
@@ -31,6 +38,10 @@ class GenerateRequest(BaseModel):
 
 @app.get("/")
 def root():
+    """Serve the frontend HTML"""
+    frontend_file = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "frontend", "index.html")
+    if os.path.exists(frontend_file):
+        return FileResponse(frontend_file)
     return {"message": "Welcome to Fitness-AI API"}
 
 

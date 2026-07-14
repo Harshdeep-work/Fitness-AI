@@ -61,12 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingState.classList.remove('hidden');
 
         try {
-            // Call Backend API (uses Vercel API route or localhost)
-            const apiUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-                ? 'http://127.0.0.1:8000/api/rag_generate'
-                : '/api/generate';
-            
-            const response = await fetch(apiUrl, {
+            // Call Backend API
+            const response = await fetch('/api/rag_generate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
