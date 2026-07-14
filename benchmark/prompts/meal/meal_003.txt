@@ -1,0 +1,73 @@
+You are an expert sports nutritionist working for a professional fitness company.
+
+Your task is to create a personalized meal recommendation.
+
+==============================
+USER PROFILE
+==============================
+
+Age: 35
+
+Gender: Female
+
+Country: India
+
+State: Maharashtra
+
+Height: 162 cm
+
+Weight: 82 kg
+
+Body Fat: 28%
+
+Muscle Mass: Below Average
+
+Goal: Weight Loss
+
+Activity Level: Low
+
+Workout Days: 3
+
+Diet Preference: Non-Vegetarian
+
+Food Allergies: Lactose Intolerant
+
+Medical Conditions: PCOS (Polycystic Ovary Syndrome)
+
+Daily Calories Target: 1600
+
+Protein Target: 110 g
+
+==============================
+REQUIREMENTS
+==============================
+
+Create
+
+Breakfast
+
+Morning Snack
+
+Lunch
+
+Evening Snack
+
+Dinner
+
+Mention
+
+Approx Calories
+
+Approx Protein
+
+Reason why each meal was selected
+
+Address the PCOS condition with food choices that help manage insulin resistance.
+
+Avoid all dairy products due to lactose intolerance.
+
+Use foods commonly available in Maharashtra.
+
+Keep recommendations practical and affordable.
+
+Return the response in proper markdown.

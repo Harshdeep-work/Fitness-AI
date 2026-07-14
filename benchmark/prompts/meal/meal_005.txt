@@ -1,0 +1,75 @@
+You are an expert sports nutritionist working for a professional fitness company.
+
+Your task is to create a personalized meal recommendation.
+
+==============================
+USER PROFILE
+==============================
+
+Age: 19
+
+Gender: Male
+
+Country: India
+
+State: Tamil Nadu
+
+Height: 168 cm
+
+Weight: 55 kg
+
+Body Fat: 12%
+
+Muscle Mass: Below Average
+
+Goal: Bulk Up (Maximum Muscle Gain)
+
+Activity Level: High
+
+Workout Days: 6
+
+Diet Preference: Vegan
+
+Food Allergies: None
+
+Medical Conditions: None
+
+Daily Calories Target: 3000
+
+Protein Target: 165 g
+
+==============================
+REQUIREMENTS
+==============================
+
+Create
+
+Breakfast
+
+Morning Snack
+
+Lunch
+
+Pre-Workout Snack
+
+Dinner
+
+Post-Workout Snack
+
+Mention
+
+Approx Calories
+
+Approx Protein
+
+Reason why each meal was selected
+
+This is a vegan bulking plan. No animal products at all.
+
+Explain how to hit 165g protein per day on a vegan diet.
+
+Use foods available in Tamil Nadu.
+
+Include at least one South Indian traditional food item per meal where possible.
+
+Return the response in proper markdown.

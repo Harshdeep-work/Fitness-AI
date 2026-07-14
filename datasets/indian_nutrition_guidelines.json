@@ -1,0 +1,57 @@
+[
+  {
+    "topic": "Protein Sources for Vegetarians",
+    "region": "Gujarat",
+    "content": "Besan (chickpea flour) is a highly recommended protein source in Gujarat, providing around 21g of protein per 100g. It is commonly used to make Besan Chilla, a protein-dense breakfast option."
+  },
+  {
+    "topic": "Diabetes Management",
+    "region": "Punjab",
+    "content": "For managing Type 2 Diabetes in Punjab, it is recommended to substitute traditional high-GI parathas with savory oats dalia. Oats contain beta-glucan fiber which helps lower post-meal blood glucose by up to 30%."
+  },
+  {
+    "topic": "PCOS Diet Guidelines",
+    "region": "Maharashtra",
+    "content": "PCOS patients should focus on low glycemic index foods. Jowar (Sorghum) Bhakri is a staple in Maharashtra with a GI of 49, making it an excellent alternative to wheat rotis. Adding flaxseeds to the diet also helps regulate estrogen levels."
+  },
+  {
+    "topic": "Vegan Protein",
+    "region": "Tamil Nadu",
+    "content": "Soy chunks are the most cost-effective vegan protein in Tamil Nadu, offering about 52g of protein per 100g. Pesarattu, made from whole green moong, is another excellent whole-food plant-based protein source."
+  },
+  {
+    "topic": "Hypertension Diet",
+    "region": "General India",
+    "content": "For hypertension, sodium intake must be restricted to less than 1500mg daily. Foods rich in potassium, such as bananas, coconut water, and rajma, help counteract sodium's blood pressure-raising effects."
+  },
+  {
+    "topic": "Muscle Gain Macros",
+    "region": "General",
+    "content": "For muscle gain (hypertrophy), the recommended macronutrient split is: 30% Protein, 50% Carbohydrates, and 20% Fats. Protein intake should be between 1.6g to 2.2g per kg of body weight. Meals should be evenly spaced 3-4 hours apart. A caloric surplus of 300-500 calories above TDEE is required."
+  },
+  {
+    "topic": "Fat Loss Macros",
+    "region": "General",
+    "content": "For fat loss (cutting), the recommended macronutrient split is: 40% Protein, 30% Carbohydrates, and 30% Fats. High protein prevents muscle loss during a caloric deficit. A caloric deficit of 300-500 calories below TDEE is required. Emphasize high-volume, low-calorie foods like bottle gourd (lauki) and spinach (palak)."
+  },
+  {
+    "topic": "North Indian Muscle Building",
+    "region": "North India",
+    "content": "For muscle building in North India, Paneer is a staple vegetarian casein protein (slow-digesting). A 100g serving of paneer offers 18g of protein. It is best consumed at night. During the day, rajma (kidney beans) combined with rice provides a complete amino acid profile."
+  },
+  {
+    "topic": "South Indian Fat Loss",
+    "region": "South India",
+    "content": "For fat loss in South India, replace white rice with millets like Foxtail Millet (Thinai) or Kodo Millet (Varagu) to increase fiber and satiety. Consume rasam daily as it aids digestion and contains spices like black pepper and cumin that have a slight thermogenic effect."
+  },
+  {
+    "topic": "Pre-Workout Nutrition",
+    "region": "General India",
+    "content": "An ideal Indian pre-workout meal consists of fast-digesting carbohydrates 45-60 minutes before training. Good options include 1-2 bananas, a small bowl of poha (beaten rice), or boiled sweet potato (shakarkandi). Avoid high fats before a workout as they slow down digestion."
+  },
+  {
+    "topic": "Post-Workout Recovery",
+    "region": "General India",
+    "content": "Post-workout recovery requires fast-digesting protein and carbohydrates within 2 hours. For non-vegetarians, 3-4 boiled egg whites are ideal. For vegetarians, whey protein is optimal, but a whole-food alternative is Sattu (roasted gram flour) mixed in water, providing 20g protein per 100g."
+  }
+]

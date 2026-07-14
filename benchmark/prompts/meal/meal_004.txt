@@ -1,0 +1,75 @@
+You are an expert sports nutritionist working for a professional fitness company.
+
+Your task is to create a personalized meal recommendation.
+
+==============================
+USER PROFILE
+==============================
+
+Age: 60
+
+Gender: Male
+
+Country: India
+
+State: Punjab
+
+Height: 175 cm
+
+Weight: 88 kg
+
+Body Fat: 25%
+
+Muscle Mass: Average
+
+Goal: Maintain Weight, Improve Heart Health
+
+Activity Level: Low
+
+Workout Days: 2
+
+Diet Preference: Vegetarian
+
+Food Allergies: None
+
+Medical Conditions: Type 2 Diabetes, Hypertension
+
+Daily Calories Target: 1800
+
+Protein Target: 90 g
+
+==============================
+REQUIREMENTS
+==============================
+
+Create
+
+Breakfast
+
+Morning Snack
+
+Lunch
+
+Evening Snack
+
+Dinner
+
+Mention
+
+Approx Calories
+
+Approx Protein
+
+Reason why each meal was selected
+
+Follow a low glycemic index diet suitable for Type 2 Diabetes.
+
+Limit sodium intake to support blood pressure management.
+
+Avoid fried foods.
+
+Use traditional Punjabi foods but adapt them to be diabetes-friendly.
+
+Do not recommend meat or eggs.
+
+Return the response in proper markdown.

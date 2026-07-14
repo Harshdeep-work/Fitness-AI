@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# RAG Database (optional - uncomment if you want to exclude)
+# rag/chroma_db/
+
+# Model files (large files)
+*.safetensors
+*.bin
+*.gguf
+*.pth
+models/*.safetensors
+
+# Logs
+*.log
+logs/
+
+# Environment variables
+.env
+.env.local

@@ -1,0 +1,88 @@
+{
+  "model": "mistral:7b",
+  "prompt_name": "meal_001",
+  "category": "meal",
+  "evaluated_at": "2026-07-13T15:12:36.764109",
+  "normalized_score": 83.3,
+  "raw_score": 50,
+  "max_raw": 60,
+  "grade": "A",
+  "checks": [
+    {
+      "reason": "Contains Breakfast section",
+      "keyword": "breakfast",
+      "passed": true,
+      "points": 5,
+      "max": 5
+    },
+    {
+      "reason": "Contains Lunch section",
+      "keyword": "lunch",
+      "passed": true,
+      "points": 5,
+      "max": 5
+    },
+    {
+      "reason": "Contains Dinner section",
+      "keyword": "dinner",
+      "passed": true,
+      "points": 5,
+      "max": 5
+    },
+    {
+      "reason": "Contains Snack section",
+      "keyword": "snack",
+      "passed": true,
+      "points": 5,
+      "max": 5
+    },
+    {
+      "reason": "Mentions calories",
+      "keyword": "calori",
+      "passed": true,
+      "points": 5,
+      "max": 5
+    },
+    {
+      "reason": "Mentions protein",
+      "keyword": "protein",
+      "passed": true,
+      "points": 5,
+      "max": 5
+    },
+    {
+      "reason": "Provides reasoning for meals",
+      "keyword": "reason",
+      "passed": false,
+      "points": 0,
+      "max": 10
+    },
+    {
+      "reason": "References regional (Gujarati) foods",
+      "keyword": "gujarati",
+      "passed": true,
+      "points": 10,
+      "max": 10
+    },
+    {
+      "reason": "Acknowledges vegetarian constraint",
+      "keyword": "vegetarian",
+      "passed": true,
+      "points": 5,
+      "max": 5
+    },
+    {
+      "reason": "Mentions hydration",
+      "keyword": "hydrat",
+      "passed": true,
+      "points": 5,
+      "max": 5
+    }
+  ],
+  "performance": {
+    "eval_count": 2485,
+    "eval_duration_ns": 710000000000,
+    "total_duration_ns": 718000000000,
+    "tokens_per_sec": 3.5
+  }
+}

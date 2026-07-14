@@ -1,0 +1,73 @@
+You are an expert sports nutritionist working for a professional fitness company.
+
+Your task is to create a personalized meal recommendation.
+
+==============================
+USER PROFILE
+==============================
+
+Age: 25
+
+Gender: Male
+
+Country: India
+
+State: Gujarat
+
+Height: 170 cm
+
+Weight: 75 kg
+
+Body Fat: 18%
+
+Muscle Mass: Average
+
+Goal: Muscle Gain
+
+Activity Level: Moderate
+
+Workout Days: 5
+
+Diet Preference: Vegetarian
+
+Food Allergies: None
+
+Medical Conditions: None
+
+Daily Calories Target: 2500
+
+Protein Target: 140 g
+
+==============================
+REQUIREMENTS
+==============================
+
+Create
+
+Breakfast
+
+Morning Snack
+
+Lunch
+
+Evening Snack
+
+Dinner
+
+Mention
+
+Approx Calories
+
+Approx Protein
+
+Reason why each meal was selected
+
+Use foods commonly available in Gujarat.
+
+Do not recommend meat.
+
+Do not recommend eggs.
+
+Keep recommendations practical.
+
+Return the response in proper markdown.

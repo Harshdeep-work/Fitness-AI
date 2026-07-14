@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness AI - Intelligent Health & Nutrition Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">💪</span>
+                <h1>Fitness <span class="highlight">AI</span></h1>
+            </div>
+            <p class="tagline">Personalized Indian Nutrition & Fitness Recommendations</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Input Form Section -->
+            <section class="input-section">
+                <div class="section-header">
+                    <h2>📋 Your Profile</h2>
+                    <p>Fill in all details for accurate recommendations</p>
+                </div>
+
+                <form id="fitnessForm" class="fitness-form">
+                    <!-- Basic Information -->
+                    <div class="form-section">
+                        <h3 class="section-title">Basic Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="age">Age *</label>
+                                <input type="number" id="age" placeholder="25" min="10" max="100" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="gender">Gender *</label>
+                                <select id="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="height">Height (cm) *</label>
+                                <input type="number" id="height" placeholder="170" min="100" max="250" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="weight">Current Weight (kg) *</label>
+                                <input type="number" id="weight" placeholder="70" min="30" max="200" step="0.1" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="targetWeight">Target Weight (kg)</label>
+                                <input type="number" id="targetWeight" placeholder="65" min="30" max="200" step="0.1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location & Lifestyle -->
+                    <div class="form-section">
+                        <h3 class="section-title">Location & Lifestyle</h3>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="region">Region / State (India) *</label>
+                                <select id="region" required>
+                                    <option value="">Select State</option>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="activityLevel">Activity Level *</label>
+                                <select id="activityLevel" required>
+                                    <option value="">Select Activity Level</option>
+                                    <option value="Sedentary">Sedentary (Little/no exercise)</option>
+                                    <option value="Lightly Active">Lightly Active (1-3 days/week)</option>
+                                    <option value="Moderately Active">Moderately Active (3-5 days/week)</option>
+                                    <option value="Very Active">Very Active (6-7 days/week)</option>
+                                    <option value="Extremely Active">Extremely Active (Athlete)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="occupation">Occupation Type *</label>
+                            <select id="occupation" required>
+                                <option value="">Select Occupation Type</option>
+                                <option value="Desk Job">Desk Job (Sitting 8+ hours)</option>
+                                <option value="Standing Job">Standing Job (Teacher, Retail)</option>
+                                <option value="Physical Labor">Physical Labor (Construction, Delivery)</option>
+                                <option value="Student">Student</option>
+                                <option value="Homemaker">Homemaker</option>
+                                <option value="Retired">Retired</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Fitness Goals -->
+                    <div class="form-section">
+                        <h3 class="section-title">Fitness Goals</h3>
+                        
+                        <div class="input-group">
+                            <label for="primaryGoal">Primary Goal *</label>
+                            <select id="primaryGoal" required>
+                                <option value="">Select Your Goal</option>
+                                <option value="Weight Loss">Weight Loss (Fat Loss)</option>
+                                <option value="Muscle Gain">Muscle Gain (Bulking)</option>
+                                <option value="Weight Maintenance">Weight Maintenance</option>
+                                <option value="Athletic Performance">Athletic Performance</option>
+                                <option value="General Wellness">General Wellness</option>
+                                <option value="Body Recomposition">Body Recomposition</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="timeline">Target Timeline *</label>
+                                <select id="timeline" required>
+                                    <option value="">Select Timeline</option>
+                                    <option value="1-3 months">1-3 months</option>
+                                    <option value="3-6 months">3-6 months</option>
+                                    <option value="6-12 months">6-12 months</option>
+                                    <option value="Long term">Long term (1+ year)</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="workoutDays">Workout Days/Week *</label>
+                                <select id="workoutDays" required>
+                                    <option value="">Select Days</option>
+                                    <option value="0">0 (No workout)</option>
+                                    <option value="1-2">1-2 days</option>
+                                    <option value="3-4">3-4 days</option>
+                                    <option value="5-6">5-6 days</option>
+                                    <option value="7">7 days (Daily)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Diet Preferences -->
+                    <div class="form-section">
+                        <h3 class="section-title">Diet Preferences</h3>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="dietType">Diet Type *</label>
+                                <select id="dietType" required>
+                                    <option value="">Select Diet Type</option>
+                                    <option value="Vegetarian">Vegetarian</option>
+                                    <option value="Vegan">Vegan</option>
+                                    <option value="Eggetarian">Eggetarian</option>
+                                    <option value="Non-Vegetarian">Non-Vegetarian (Includes Chicken/Fish)</option>
+                                    <option value="Pescatarian">Pescatarian (Fish only)</option>
+                                    <option value="Jain">Jain (No root vegetables)</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="mealsPerDay">Meals per Day *</label>
+                                <select id="mealsPerDay" required>
+                                    <option value="">Select Meals/Day</option>
+                                    <option value="2">2 meals</option>
+                                    <option value="3">3 meals</option>
+                                    <option value="4">4 meals</option>
+                                    <option value="5">5 meals</option>
+                                    <option value="6">6 meals</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="foodAllergies">Food Allergies / Intolerances</label>
+                            <input type="text" id="foodAllergies" placeholder="e.g., Lactose intolerant, Gluten, Nuts, None">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="dislikedFoods">Foods You Dislike</label>
+                            <input type="text" id="dislikedFoods" placeholder="e.g., Brinjal, Bitter gourd, None">
+                        </div>
+                    </div>
+
+                    <!-- Health Conditions -->
+                    <div class="form-section">
+                        <h3 class="section-title">Health Conditions</h3>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="medicalConditions">Medical Conditions</label>
+                                <select id="medicalConditions" multiple>
+                                    <option value="None">None</option>
+                                    <option value="Diabetes (Type 2)">Diabetes (Type 2)</option>
+                                    <option value="PCOS/PCOD">PCOS/PCOD</option>
+                                    <option value="Thyroid (Hypo/Hyper)">Thyroid (Hypo/Hyper)</option>
+                                    <option value="Hypertension">Hypertension (High BP)</option>
+                                    <option value="Heart Disease">Heart Disease</option>
+                                    <option value="Kidney Disease">Kidney Disease</option>
+                                    <option value="Fatty Liver">Fatty Liver</option>
+                                    <option value="IBS">IBS (Irritable Bowel Syndrome)</option>
+                                </select>
+                                <small>Hold Ctrl/Cmd to select multiple</small>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="medications">Current Medications</label>
+                                <input type="text" id="medications" placeholder="e.g., Metformin, Thyroid meds, None">
+                            </div>
+                            <div class="input-group">
+                                <label for="supplements">Current Supplements</label>
+                                <input type="text" id="supplements" placeholder="e.g., Whey protein, Multivitamin, None">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Information -->
+                    <div class="form-section">
+                        <h3 class="section-title">Additional Details</h3>
+                        
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="sleepHours">Sleep Hours/Night *</label>
+                                <select id="sleepHours" required>
+                                    <option value="">Select Sleep Hours</option>
+                                    <option value="<5">Less than 5 hours</option>
+                                    <option value="5-6">5-6 hours</option>
+                                    <option value="6-7">6-7 hours</option>
+                                    <option value="7-8">7-8 hours</option>
+                                    <option value="8+">8+ hours</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="waterIntake">Water Intake/Day (Liters) *</label>
+                                <input type="number" id="waterIntake" placeholder="2.5" min="0" max="10" step="0.1" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="stressLevel">Stress Level *</label>
+                            <select id="stressLevel" required>
+                                <option value="">Select Stress Level</option>
+                                <option value="Low">Low</option>
+                                <option value="Moderate">Moderate</option>
+                                <option value="High">High</option>
+                                <option value="Very High">Very High</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="additionalNotes">Additional Notes / Special Requests</label>
+                            <textarea id="additionalNotes" rows="3" placeholder="Any other information you'd like to share..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span id="btnText">Generate Personalized Plan</span>
+                        <span class="spinner hidden" id="spinner"></span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Output Section -->
+            <section class="output-section">
+                <div class="section-header">
+                    <h2>✨ Your Personalized Recommendation</h2>
+                    <span class="model-badge">Powered by Fine-tuned Gemma 3:4b + RAG</span>
+                </div>
+
+                <div class="output-container" id="outputContainer">
+                    <!-- Empty State -->
+                    <div class="empty-state" id="emptyState">
+                        <div class="empty-icon">🎯</div>
+                        <h3>Ready to Transform Your Health?</h3>
+                        <p>Fill out the comprehensive form to receive your personalized nutrition and fitness plan tailored to Indian cuisine and lifestyle.</p>
+                        <div class="features">
+                            <div class="feature">✅ Region-specific meal plans</div>
+                            <div class="feature">✅ Medical condition aware</div>
+                            <div class="feature">✅ Cultural food preferences</div>
+                            <div class="feature">✅ Accurate macro calculations</div>
+                        </div>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div class="loading-state hidden" id="loadingState">
+                        <div class="loader"></div>
+                        <h3>Analyzing Your Profile...</h3>
+                        <p>Retrieving regional guidelines from ChromaDB</p>
+                        <p class="sub-text">Generating AI recommendations (30-90 seconds)</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                    </div>
+
+                    <!-- Results -->
+                    <div class="results-container hidden" id="resultsContainer">
+                        <div class="user-summary" id="userSummary"></div>
+                        <div class="recommendation-content" id="recommendationContent"></div>
+                        <div class="steps-display" id="stepsDisplay"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
