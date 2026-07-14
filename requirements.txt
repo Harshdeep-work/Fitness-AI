@@ -1,2 +1,0 @@
-# Vercel Python Runtime Requirements
-# Note: Keep this minimal as Vercel has size limits for serverless functions
