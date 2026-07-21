@@ -1,10 +1,11 @@
 import os
 import sys
+import json
 import requests
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, StreamingResponse
 from pydantic import BaseModel
 
 # Add parent directory to path to import rag module
@@ -124,6 +125,46 @@ User Request: {request.prompt}
         }
     except requests.exceptions.RequestException as e:
         return {"status": "error", "message": str(e)}
+
+
+@app.post("/api/rag_stream")
+def rag_stream_response(request: GenerateRequest):
+    """
+    Stream the response from Ollama using SSE.
+    """
+    context = get_context(request.prompt)
+    
+    augmented_prompt = f"""You are an expert AI Nutritionist. Use the following context to answer the user's request. If the context does not contain the answer, rely on your general knowledge but prioritize the context.
+
+Context:
+{context}
+
+User Request: {request.prompt}
+"""
+    
+    ollama_url = "http://localhost:11434/api/generate"
+    payload = {
+        "model": request.model,
+        "prompt": augmented_prompt,
+        "stream": True
+    }
+    
+    def generate():
+        try:
+            with requests.post(ollama_url, json=payload, stream=True, timeout=1200) as response:
+                response.raise_for_status()
+                for line in response.iter_lines():
+                    if line:
+                        data = json.loads(line)
+                        chunk = {
+                            "token": data.get("response", ""),
+                            "done": data.get("done", False)
+                        }
+                        yield f"data: {json.dumps(chunk)}\n\n"
+        except Exception as e:
+            yield f"data: {json.dumps({'error': str(e)})}\n\n"
+
+    return StreamingResponse(generate(), media_type="text/event-stream")
 
 
 if __name__ == "__main__":

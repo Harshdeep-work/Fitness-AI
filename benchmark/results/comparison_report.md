@@ -2,9 +2,9 @@
 
 | Field | Value |
 |-------|-------|
-| Generated | 2026-07-13 15:12:47 |
-| Category Filter | meal |
-| Models Compared | 4 |
+| Generated | 2026-07-21 10:26:40 |
+| Category Filter | All Categories |
+| Models Compared | 5 |
 | Prompts Evaluated | 5 |
 
 ---
@@ -15,7 +15,8 @@
 
 | Model | meal_001 | meal_002 | meal_003 | meal_004 | meal_005 | **AVG** | Grade |
 |---||---||---||---||---||---||---||---|
-| `qwen3_4b` | 100 | 75 | 75 | 83 | 75 | **81.7** | A 🏆 |
+| `gemma` | 100 | — | — | — | — | **100.0** | A+ 🏆 |
+| `qwen3_4b` | 100 | 75 | 75 | 83 | 75 | **81.7** | A |
 | `gemma3_4b` | 100 | 42 | 75 | 83 | 75 | **75.0** | B |
 | `llama3.2_3b` | 83 | 58 | 75 | 83 | 58 | **71.6** | B |
 | `mistral_7b` | 83 | 33 | 50 | 58 | 42 | **53.3** | D |
@@ -29,8 +30,9 @@
 | Model | Avg Tokens/sec | Prompts Tested |
 |-------|----------------|----------------|
 | `llama3.2_3b` | 7.35 | 5 |
+| `gemma` | 6.4 🚀 | 1 |
 | `gemma3_4b` | 6.15 | 5 |
-| `qwen3_4b` | 6.04 🚀 | 5 |
+| `qwen3_4b` | 6.04 | 5 |
 | `mistral_7b` | 3.5 | 5 |
 
 ---
@@ -39,6 +41,7 @@
 
 | Model | meal |
 |---|---|
+| `gemma` | 100.0 |
 | `qwen3_4b` | 81.7 |
 | `gemma3_4b` | 75.0 |
 | `llama3.2_3b` | 71.6 |
@@ -48,18 +51,18 @@
 
 ## 4. Recommended Production Model
 
-### 🏆 Winner: `qwen3_4b`
+### 🏆 Winner: `gemma`
 
 | Metric | Value |
 |--------|-------|
-| Average Quality Score | **81.7 / 100** |
-| Average Tokens/sec | **6.04** |
-| Prompts Evaluated | 5 |
-| Weighted Final Score | 81.84 |
+| Average Quality Score | **100.0 / 100** |
+| Average Tokens/sec | **6.4** |
+| Prompts Evaluated | 1 |
+| Weighted Final Score | 96.12 |
 
 **Why this model won:**
 
-The selection formula weights **quality (70%) + speed (30%)**. `qwen3_4b` scored highest on the weighted formula with a final score of **81.84**. It demonstrated strong structural completeness, referenced regional foods, provided clear reasoning, and maintained consistent output across all prompts.
+The selection formula weights **quality (70%) + speed (30%)**. `gemma` scored highest on the weighted formula with a final score of **96.12**. It demonstrated strong structural completeness, referenced regional foods, provided clear reasoning, and maintained consistent output across all prompts.
 
 **Formula used:**
 ```

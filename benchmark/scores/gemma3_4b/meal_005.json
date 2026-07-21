@@ -2,7 +2,7 @@
   "model": "gemma3:4b",
   "prompt_name": "meal_005",
   "category": "meal",
-  "evaluated_at": "2026-07-13T13:43:55.713523",
+  "evaluated_at": "2026-07-21T10:26:40.267676",
   "normalized_score": 75.0,
   "raw_score": 45,
   "max_raw": 60,

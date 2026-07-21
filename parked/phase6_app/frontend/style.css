@@ -630,3 +630,15 @@ small {
         padding: 1rem;
     }
 }
+
+/* Blinking typing cursor shown while model streams */
+.typing-cursor {
+    display: inline-block;
+    color: #6366f1;
+    font-weight: bold;
+    animation: blink 0.8s step-end infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}

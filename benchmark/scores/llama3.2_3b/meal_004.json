@@ -2,7 +2,7 @@
   "model": "llama3.2:3b",
   "prompt_name": "meal_004",
   "category": "meal",
-  "evaluated_at": "2026-07-13T15:12:36.685182",
+  "evaluated_at": "2026-07-21T10:26:40.403708",
   "normalized_score": 83.3,
   "raw_score": 50,
   "max_raw": 60,

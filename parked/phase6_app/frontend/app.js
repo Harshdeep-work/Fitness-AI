@@ -61,12 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingState.classList.remove('hidden');
 
         try {
-            // Call Backend API
-            const response = await fetch('/api/rag_generate', {
+            // Show results panel IMMEDIATELY — before the model even starts
+            displayUserSummary(formData, bmi, bmr, tdee);
+            displaySteps(recommendedSteps);
+            recommendationContent.innerHTML = '<span class="typing-cursor">Generating your plan… ▮</span>';
+            loadingState.classList.add('hidden');
+            resultsContainer.classList.remove('hidden');
+
+            // Call the streaming endpoint
+            const response = await fetch('/api/rag_stream', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     prompt: prompt,
                     model: "gemma3:4b"
@@ -77,25 +82,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
 
-            const data = await response.json();
+            // Read SSE stream token by token — renders live as model generates
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            let fullText = '';
+            let buffer = '';
 
-            if (data.status === 'success') {
-                // Display user summary
-                displayUserSummary(formData, bmi, bmr, tdee);
-                
-                // Display recommendation
-                recommendationContent.innerHTML = marked.parse(data.response);
-                
-                // Display steps recommendation
-                displaySteps(recommendedSteps);
-                
-                // Show results
-                loadingState.classList.add('hidden');
-                resultsContainer.classList.remove('hidden');
-            } else {
-                throw new Error(data.message || 'Failed to generate recommendation');
+            while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+
+                buffer += decoder.decode(value, { stream: true });
+                const lines = buffer.split('\n');
+                buffer = lines.pop(); // keep incomplete line in buffer
+
+                for (const line of lines) {
+                    if (!line.startsWith('data: ')) continue;
+                    try {
+                        const chunk = JSON.parse(line.slice(6));
+                        if (chunk.error) throw new Error(chunk.error);
+                        fullText += chunk.token || '';
+                        // Render markdown live + blinking cursor while generating
+                        recommendationContent.innerHTML = marked.parse(fullText) +
+                            (chunk.done ? '' : '<span class="typing-cursor">▮</span>');
+                        if (chunk.done) break;
+                    } catch (parseErr) { /* skip malformed chunk */ }
+                }
             }
-            
+
+            if (!fullText.trim()) {
+                throw new Error('Empty response from model');
+            }
+
         } catch (error) {
             console.error('Error:', error);
             recommendationContent.innerHTML = `
@@ -114,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnText.textContent = 'Generate Personalized Plan';
             spinner.classList.add('hidden');
         }
+
     });
 
     function getSelectedOptions(selectId) {

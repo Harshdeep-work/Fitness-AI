@@ -2,7 +2,7 @@
   "model": "qwen3:4b",
   "prompt_name": "meal_004",
   "category": "meal",
-  "evaluated_at": "2026-07-13T14:55:21.893143",
+  "evaluated_at": "2026-07-21T10:26:40.794647",
   "normalized_score": 83.3,
   "raw_score": 50,
   "max_raw": 60,

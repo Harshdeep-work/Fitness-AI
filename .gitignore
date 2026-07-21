@@ -22,8 +22,9 @@ build/
 .DS_Store
 Thumbs.db
 
-# RAG Database (optional - uncomment if you want to exclude)
-# rag/chroma_db/
+# RAG vector store (regenerate via rag/ingest.py + datasets/process_and_ingest.py)
+rag/chroma_db/*
+!rag/chroma_db/README.md
 
 # Model files (large files)
 *.safetensors

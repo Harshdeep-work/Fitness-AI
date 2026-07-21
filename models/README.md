@@ -2,6 +2,8 @@
 
 This directory contains scripts and configurations for fine-tuning Google's Gemma model on Indian diet and nutrition data using QLoRA (Quantized Low-Rank Adaptation).
 
+> **Phase 0:** Primary docs are this file and [`docs/PROJECT_OVERVIEW.md`](../docs/PROJECT_OVERVIEW.md). The FastAPI app is parked at [`parked/phase6_app/backend/`](../parked/phase6_app/backend/) until Phase 6+.
+
 ## 🎯 Why Fine-Tuning?
 
 **Problem with Base Model + RAG:**

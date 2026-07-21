@@ -53,7 +53,6 @@ PROMPTS_DIR = os.path.join(PROJECT_ROOT, "benchmark", "prompts")
 # The folder where raw JSON results and Markdown reports are stored.
 RESULTS_DIR = os.path.join(PROJECT_ROOT, "benchmark", "results")
 
-
 # ---------------------------------------------------------------------------
 # ARGUMENT PARSING
 # ---------------------------------------------------------------------------

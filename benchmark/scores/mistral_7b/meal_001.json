@@ -2,7 +2,7 @@
   "model": "mistral:7b",
   "prompt_name": "meal_001",
   "category": "meal",
-  "evaluated_at": "2026-07-13T15:12:36.764109",
+  "evaluated_at": "2026-07-21T10:26:40.471244",
   "normalized_score": 83.3,
   "raw_score": 50,
   "max_raw": 60,
